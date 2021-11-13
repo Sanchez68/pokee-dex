@@ -1,0 +1,11 @@
+.headerMain {
+    width: 100%;
+    background-color: grey;
+    position: fixed;
+    text-align: center;
+    line-height: 10px;
+}
+.headerMain p {
+    font-size: 20px;
+    font-weight: bold;
+}
