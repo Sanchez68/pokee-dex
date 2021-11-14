@@ -1,9 +1,9 @@
 .headerMain {
     width: 100%;
-    background-color: grey;
-    position: fixed;
+    background-color: darkgoldenrod;
     text-align: center;
-    line-height: 10px;
+    margin-top: 0;
+    padding-top: 10px;
 }
 .headerMain p {
     font-size: 20px;

@@ -18,12 +18,5 @@ export const pokemonsAPI = {
                 return response.data
             })
     },
-    getNextPokemons(next) {
-        return axios.get(next)
-            .then(response => {
-                debugger
-                return response.data
-            })
-    }
 
 }

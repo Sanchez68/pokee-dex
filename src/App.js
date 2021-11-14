@@ -1,15 +1,15 @@
 import React from "react";
 import './App.css';
 import PokesDeskContainer from "./components/Body/PokesDeskContainer";
-import Header from "./components/Header/Header";
-
+import PokeHeader from "./components/PokeHeader/PokeHeader";
+import "antd/dist/antd.css";
 
 
 function  App () {
   return (
       <div className="App">
         <div className='headerWrapper'>
-          <Header/>
+          <PokeHeader/>
         </div>
         <div className='bodyWrapper'>
           <PokesDeskContainer/>

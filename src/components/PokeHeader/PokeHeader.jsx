@@ -1,17 +1,17 @@
 import React from 'react'
-import styles from "./Header.module.css"
+import styles from "./PokeHeader.module.css"
 
 
-const Header = () => {
+const PokeHeader = () => {
     return (
-        <header>
+        <div>
             <div className={styles.headerMain}>
 
                 <p>PokeDex</p>
 
             </div>
-        </header>
+        </div>
     )
 }
 
-export default Header
+export default PokeHeader
