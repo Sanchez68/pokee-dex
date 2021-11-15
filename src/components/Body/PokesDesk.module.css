@@ -141,9 +141,9 @@
 }
 
 .pokeDeskWrapper {
-    background: #8c8e90;
     text-align: center;
 }
+
 .butLoadMore {
     padding: 10px;
 }
@@ -152,19 +152,22 @@
     width: 100%;
     height: 30vh;
 }
-.butLoadMore{
+
+.butLoadMore {
     text-align: center;
 }
+
 .butLoadMore Button {
     min-width: 35vw;
 }
+
 .pokemonInfoCard {
     font-size: 17px;
     min-width: 30vw;
-    background: rgb(34,193,195);
+    background: rgb(34, 193, 195);
     background: linear-gradient(0deg,
-    rgba(34,193,195,1) 0%,
-    rgba(45,253,154,0.9431818181818182) 100%);
+    rgba(34, 193, 195, 1) 0%,
+    rgba(45, 253, 154, 0.9431818181818182) 100%);
     border: 3px solid black;
     display: flex;
     flex-direction: column;
@@ -172,16 +175,19 @@
     z-index: -1;
     position: fixed;
 }
-.pokeInfWrapper{
+
+.pokeInfWrapper {
     display: flex;
     justify-content: center;
     /*text-align: center;*/
     /*min-height: 800px;*/
 }
+
 .pokemonNameInfo {
     font-size: 20px;
     font-weight: bold;
 }
+
 .pokemonInfoCard table {
     width: 80%;
     background: #fff8cd;
@@ -189,15 +195,80 @@
     margin: 5px;
     border-top: 1px solid black;
 }
+
 td, th {
     padding: 5px; /* Поля вокруг текста */
     border: 1px solid black;
     border-left: none;
     border-top: none;
 }
+
 td:first-child {
     border-left: 1px solid black;
 }
+
 th:first-child {
     border-top: 1px solid black;
+}
+
+@media screen and (max-width: 670px) and (min-width: 451px) {
+    .pokemonsContainer {
+        grid-template-columns: 50%;
+    }
+
+    .pokemonsContainerWrapper {
+        grid-template-columns: 50% 50%;
+        width: 100%;
+    }
+
+    .pokemonInfoCard {
+        font-size: 10px;
+        min-width: 20vw;
+        border: 1px solid black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        z-index: -1;
+        position: fixed;
+    }
+
+    .pokemonInfoCard img {
+        width: 50%;
+        height: 10vh;
+    }
+
+    .pokemonInfoCard {
+        width: 45vw;
+        right: 5%;
+        font-size: 12px;
+    }
+    .cardOfPokeList {
+        width: 10%;
+    }
+}
+
+@media (max-width: 1450px) and (min-width: 901px) {
+    .pokeCardWrapper {
+
+    }
+
+    .cardOfPokeList {
+        width: 10%;
+    }
+
+    .pokemonInfoCard {
+        font-size: 10px;
+        min-width: 20vw;
+        border: 1px solid black;
+    }
+
+    .pokemonInfoCard img {
+        width: 50%;
+        height: 10vh;
+    }
+
+    .pokemonsContainerWrapper {
+        grid-template-columns: 50% 50%;
+        width: 100%;
+    }
 }

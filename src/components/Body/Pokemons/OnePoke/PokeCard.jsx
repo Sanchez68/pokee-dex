@@ -1,7 +1,6 @@
 import React from 'react';
 import {Card, Col} from "antd";
 import s from "../../PokesDesk.module.css"
-import {setChoosedPokemon} from "../../../../redux/pokeReducer";
 
 const PokeCard = (props) => {
     const { Meta } = Card;
@@ -10,7 +9,7 @@ const PokeCard = (props) => {
     let imgUrl = p.sprites.other.home.front_default
     return (
         <div className={s.pokeCardWrapper} onClick={()=>props.setChoosedPokemon(p)}>
-            <Col span={8} key={p.id}>
+            <Col span={8} key={p.id} className={s.cardOfPokeList}>
                 <div >
                     <Card
                         hoverable

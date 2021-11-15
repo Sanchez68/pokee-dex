@@ -1,3 +1,10 @@
 /*.bodyWrapper{*/
 /*    padding-top: 60px;*/
 /*}*/
+
+body{
+    /*background: url("./assets/images/pokeBackgroudImg.jpg");*/
+}
+.App {
+    text-align: center;
+}

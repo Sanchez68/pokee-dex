@@ -13,12 +13,14 @@ const PokesDesk = (props) => {
             <div className={s.pokeListInfo}>
                 <Row gutter={[32, 0]}
                 >
-                {props.pokemons.map(p => {
+                    {props.pokemons.map(p => {
 
-                    return <div key={p.id}><PokeCard pokemon={p} setChoosedPokemon={props.setChoosedPokemon}/></div>
-                })
-                }
-                    </Row>
+                        return <div key={p.id}><PokeCard pokemon={p}
+                        setChoosedPokemon={props.setChoosedPokemon}
+                        /></div>
+                    })
+                    }
+                </Row>
             </div>
 
             <div className={s.butLoadMore}>

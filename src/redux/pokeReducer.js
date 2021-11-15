@@ -11,7 +11,7 @@ let initialState = {
     pageLimit: 12,
     nextPage: `https://pokeapi.co/api/v2/pokemon/?offset=12&limit=12`,
     isFetching: true,
-    choosedPoke: {}
+    choosedPoke: {},
 }
 
 export const pokeReducer = (state = initialState, action) => {
@@ -65,7 +65,6 @@ export const newPokemonsData = (data) => async (dispatch) => {
 
 export const requestPokemons = (pageLimit) => {
     return async (dispatch) => {
-
         dispatch(toggleIsFetching(true))
         const data = await pokemonsAPI.getPokemons(pageLimit)
         const pokeData = await dispatch(newPokemonsData(data.results))
@@ -81,3 +80,4 @@ export const requestLoadMore = (url) => {
         dispatch(setNewPokemons(pokeData, data.next))
     }
 }
+
