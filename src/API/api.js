@@ -18,5 +18,11 @@ export const pokemonsAPI = {
                 return response.data
             })
     },
+    getTypes() {
+        return instance.get('type')
+            .then(response => {
+                return response.data
+            })
+    },
 
 }

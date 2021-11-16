@@ -1,10 +1,15 @@
-/*.bodyWrapper{*/
-/*    padding-top: 60px;*/
-/*}*/
-
-body{
-    /*background: url("./assets/images/pokeBackgroudImg.jpg");*/
+@media screen and (max-width: 670px) and (min-width: 300px) {
+    .ant-card-meta-detail .ant-card-meta-title{
+        font-size: 13px;
+        overflow:visible ;
+    }
 }
-.App {
-    text-align: center;
+.ant-row {
+    justify-content: center;
+}
+.ant-card {
+    border-color: transparent;
+    box-shadow: 0 1px 2px -2px rgb(0 0 0),
+    0 3px 6px 0 rgb(0 0 0),
+    0 5px 12px 4px rgb(0 0 0 );
 }

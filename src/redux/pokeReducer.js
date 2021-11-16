@@ -4,6 +4,9 @@ const SET_POKEMONS = 'SET_POKEMONS'
 const SET_NEW_POKEMONS = 'SET_NEW_POKEMONS'
 const TOGGLE_IS_FETCHING = 'TOGGLE_IS_FETCHING';
 const SET_CHOOSED_POKEMON = 'SET_CHOOSED_POKEMON';
+const SET_CURRENT_TYPE = 'SET_CURRENT_TYPE';
+const SET_ALL_TYPES = 'SET_ALL_TYPES';
+
 
 
 let initialState = {
@@ -12,6 +15,9 @@ let initialState = {
     nextPage: `https://pokeapi.co/api/v2/pokemon/?offset=12&limit=12`,
     isFetching: true,
     choosedPoke: {},
+    currentType: 'all',
+    types:[],
+
 }
 
 export const pokeReducer = (state = initialState, action) => {
@@ -37,6 +43,17 @@ export const pokeReducer = (state = initialState, action) => {
             return {
                 ...state, choosedPoke: action.chosedPokemon
             }
+        case
+        SET_CURRENT_TYPE:
+            return {
+                ...state, currentType: action.currentType
+            }
+        case SET_ALL_TYPES: {
+            return {
+                ...state,
+                types: action.types
+            }
+        }
         default:
             return state
     }
@@ -51,7 +68,10 @@ export const setNewPokemons = (newPokemons, next) => ({
 export const setChoosedPokemon = (chosedPokemon) => ({
     type: SET_CHOOSED_POKEMON, chosedPokemon
 })
-
+export const setCurrentType = (currentType) => ({
+    type: SET_CURRENT_TYPE, currentType
+})
+export const setAllTypes = (types) => ({type: SET_ALL_TYPES, types})
 export const toggleIsFetching = (isFetching) => ({
     type: TOGGLE_IS_FETCHING, isFetching
 })
@@ -69,6 +89,8 @@ export const requestPokemons = (pageLimit) => {
         const data = await pokemonsAPI.getPokemons(pageLimit)
         const pokeData = await dispatch(newPokemonsData(data.results))
         dispatch(setPokemons(pokeData))
+        const allTypes = await pokemonsAPI.getTypes()
+        dispatch(setAllTypes(allTypes.results))
         dispatch(toggleIsFetching(false))
     }
 }

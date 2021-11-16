@@ -2,16 +2,13 @@ import React from 'react';
 import s from "../PokesDesk.module.css"
 import {Button, Col, Row} from "antd";
 import PokeCard from "./OnePoke/PokeCard";
-import {setChoosedPokemon} from "../../../redux/pokeReducer";
 
 
 const PokesDesk = (props) => {
     return (
-
-
         <div className={s.pokeDeskWrapper}>
             <div className={s.pokeListInfo}>
-                <Row gutter={[32, 0]}
+                <Row className={s.rowPokeList} gutter={[32, 32]}
                 >
                     {props.pokemons.map(p => {
 

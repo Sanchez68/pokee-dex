@@ -161,6 +161,10 @@
     min-width: 35vw;
 }
 
+.antdCardWrapper {
+    width: 240px
+}
+
 .pokemonInfoCard {
     font-size: 17px;
     min-width: 30vw;
@@ -179,8 +183,6 @@
 .pokeInfWrapper {
     display: flex;
     justify-content: center;
-    /*text-align: center;*/
-    /*min-height: 800px;*/
 }
 
 .pokemonNameInfo {
@@ -211,64 +213,87 @@ th:first-child {
     border-top: 1px solid black;
 }
 
-@media screen and (max-width: 670px) and (min-width: 451px) {
-    .pokemonsContainer {
-        grid-template-columns: 50%;
+@media screen and (max-width: 670px) and (min-width: 300px) {
+    .antdCardWrapper {
+        width: 120px;
+        text-align: center;
     }
 
-    .pokemonsContainerWrapper {
-        grid-template-columns: 50% 50%;
-        width: 100%;
+    .types {
+        flex-direction: column;
+    }
+
+    .cardMetaTitle title {
+        font-size: 10px;
     }
 
     .pokemonInfoCard {
-        font-size: 10px;
-        min-width: 20vw;
-        border: 1px solid black;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        z-index: -1;
         position: fixed;
     }
 
-    .pokemonInfoCard img {
-        width: 50%;
-        height: 10vh;
-    }
-
-    .pokemonInfoCard {
-        width: 45vw;
-        right: 5%;
-        font-size: 12px;
-    }
-    .cardOfPokeList {
-        width: 10%;
-    }
-}
-
-@media (max-width: 1450px) and (min-width: 901px) {
-    .pokeCardWrapper {
-
-    }
-
-    .cardOfPokeList {
-        width: 10%;
-    }
-
-    .pokemonInfoCard {
-        font-size: 10px;
-        min-width: 20vw;
-        border: 1px solid black;
-    }
-
-    .pokemonInfoCard img {
-        width: 50%;
-        height: 10vh;
-    }
-
     .pokemonsContainerWrapper {
         grid-template-columns: 50% 50%;
         width: 100%;
     }
+
+    .pokemonInfoCard img {
+        width: 100%;
+        height: 15vh;
+    }
+
+    .pokemonInfoCard {
+        font-size: 12px;
+        width: 140px;
+    }
+
+    .pokemonInfoCard table {
+        width: 90%;
+    }
+
+    .pokemonNameInfo {
+        font-size: 15px;
+    }
+
 }
+
+@media screen and (max-width: 1020px) and (min-width: 671px) {
+    .pokemonInfoCard {
+        font-size: 16px;
+        width: 160px;
+    }
+
+    .pokemonNameInfo {
+        font-size: 27px;
+        padding-left: 6px;
+        text-align: center;
+    }
+
+    .pokemonInfoCard img {
+        /*height: 25vh;*/
+    }
+
+    .pokemonInfoCard table {
+        width: 85%;
+        background: #fff8cd;
+        border-spacing: 0px;
+        margin: 5px;
+        border-top: 1px solid black;
+    }
+
+    .pokemonInfoCard {
+        padding-bottom: 10px;
+    }
+
+    .ant-row {
+        justify-content: center;
+    }
+    .pokeListInfo{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+/*@media (max-width: 1450px) and (min-width: 1021px) {*/
+
+/*}*/

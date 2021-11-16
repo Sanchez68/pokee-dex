@@ -1,6 +1,7 @@
 import React, {useEffect} from 'react';
 import {connect} from "react-redux";
 import s from "./PokesDesk.module.css"
+import {toZeroedNumber} from "../../utils/auxiliary-functions";
 
 const PokeInf = (props) => {
     const p = props.choosedPoke
@@ -18,7 +19,7 @@ const PokeInf = (props) => {
                 <div>
                     <img src={p.sprites.other.home.front_default} alt={p.name}/>
                     <div className={s.pokemonNameInfo}>
-                        {p.name.charAt(0).toUpperCase() + p.name.slice(1)}
+                        {p.name.charAt(0).toUpperCase() + p.name.slice(1) + ' #' + toZeroedNumber(p.id,3)}
                     </div>
                 </div>
                 <table>

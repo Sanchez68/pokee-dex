@@ -9,16 +9,14 @@ const PokeCard = (props) => {
     let imgUrl = p.sprites.other.home.front_default
     return (
         <div className={s.pokeCardWrapper} onClick={()=>props.setChoosedPokemon(p)}>
-            <Col span={8} key={p.id} className={s.cardOfPokeList}>
+            <Col span={8} key={p.id} className={s.ColPoke}>
                 <div >
                     <Card
                         hoverable
-                        style={{ width: 240}}
                         className={s.antdCardWrapper}
                         cover={<img alt={p.name+" img"} src={imgUrl} />}
                     >
-                        <Meta title={(p.id + '.') +
-                        (p.name.charAt(0).toUpperCase() + p.name.slice(1))}/>
+                        <Meta className={s.cardMetaTitle} title={(p.name.charAt(0).toUpperCase() + p.name.slice(1))}/>
                        <div className={s.types}>
                            {
                                p.types.map(poke=>{

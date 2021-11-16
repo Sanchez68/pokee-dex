@@ -21,8 +21,6 @@ class PokesDeskContainer extends React.Component {
             <div className={s.PokemonsContainer}>
                 {this.props.isFetching ? <Preloader/> :
                     <div className={s.pokemonsContainerWrapper}>
-                        <div>
-                            <div>
                                 <div className={s.pokemonsListBlock}>
                                     <PokesDesk
                                         pageLimit={this.props.pageLimit}
@@ -31,9 +29,6 @@ class PokesDeskContainer extends React.Component {
                                         next={this.props.next}
                                         setChoosedPokemon={this.props.setChoosedPokemon}/>
                                 </div>
-
-                            </div>
-                        </div>
                         <div className={s.pokeInfWrapper}>
                             <PokeInf choosedPoke={this.props.choosedPoke}/>
                         </div>
@@ -43,7 +38,6 @@ class PokesDeskContainer extends React.Component {
         )
     }
 }
-
 
 let mapStateToProps = (state) => {
     return {
