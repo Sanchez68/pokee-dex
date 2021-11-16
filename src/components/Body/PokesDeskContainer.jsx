@@ -27,7 +27,10 @@ class PokesDeskContainer extends React.Component {
                                         pokemons={this.props.pokemons}
                                         requestLoadMore={this.props.requestLoadMore}
                                         next={this.props.next}
-                                        setChoosedPokemon={this.props.setChoosedPokemon}/>
+                                        setChoosedPokemon={this.props.setChoosedPokemon}
+                                        currentType={this.props.currentType}
+                                        types={this.props.types}
+                                    />
                                 </div>
                         <div className={s.pokeInfWrapper}>
                             <PokeInf choosedPoke={this.props.choosedPoke}/>
@@ -46,7 +49,9 @@ let mapStateToProps = (state) => {
         isFetching: state.pokePage.isFetching,
         pokemons: state.pokePage.pokemons,
         next: state.pokePage.nextPage,
-        choosedPoke: state.pokePage.choosedPoke
+        choosedPoke: state.pokePage.choosedPoke,
+        currentType: state.pokePage.currentType,
+        types: state.pokePage.types,
     }
 }
 export default connect(mapStateToProps, {

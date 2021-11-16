@@ -49,6 +49,7 @@ export const pokeReducer = (state = initialState, action) => {
                 ...state, currentType: action.currentType
             }
         case SET_ALL_TYPES: {
+
             return {
                 ...state,
                 types: action.types

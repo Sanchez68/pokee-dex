@@ -1,5 +1,4 @@
-import React, {useEffect} from 'react';
-import {connect} from "react-redux";
+import React from 'react';
 import s from "./PokesDesk.module.css"
 import {toZeroedNumber} from "../../utils/auxiliary-functions";
 

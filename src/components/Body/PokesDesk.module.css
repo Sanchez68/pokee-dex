@@ -125,6 +125,8 @@
 .pokeCardWrapper {
     padding: 25px;
     text-align: center;
+    cursor: pointer;
+    z-index: -2;
 }
 
 .types {
@@ -183,6 +185,7 @@
 .pokeInfWrapper {
     display: flex;
     justify-content: center;
+    padding-top: 10px;
 }
 
 .pokemonNameInfo {
@@ -199,7 +202,7 @@
 }
 
 td, th {
-    padding: 5px; /* Поля вокруг текста */
+    padding: 5px;
     border: 1px solid black;
     border-left: none;
     border-top: none;
@@ -253,7 +256,6 @@ th:first-child {
     .pokemonNameInfo {
         font-size: 15px;
     }
-
 }
 
 @media screen and (max-width: 1020px) and (min-width: 671px) {
@@ -268,14 +270,9 @@ th:first-child {
         text-align: center;
     }
 
-    .pokemonInfoCard img {
-        /*height: 25vh;*/
-    }
-
     .pokemonInfoCard table {
         width: 85%;
         background: #fff8cd;
-        border-spacing: 0px;
         margin: 5px;
         border-top: 1px solid black;
     }
@@ -283,17 +280,14 @@ th:first-child {
     .pokemonInfoCard {
         padding-bottom: 10px;
     }
-
-    .ant-row {
-        justify-content: center;
-    }
-    .pokeListInfo{
-        display: flex;
-        justify-content: center;
-        text-align: center;
-    }
 }
 
-/*@media (max-width: 1450px) and (min-width: 1021px) {*/
-
-/*}*/
+.noPokemons {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    font-size: 4vw;
+    border: 1px solid #ff7f50;
+    background: rgba(255, 127, 80, 0.5);
+    padding: 10px;
+}
