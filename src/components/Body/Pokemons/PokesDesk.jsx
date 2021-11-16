@@ -39,7 +39,7 @@ const PokesDesk = (props) => {
             </div>
 
             <div className={s.butLoadMore}>
-                <Button type="primary" size="large" shape="round"
+                <Button type="primary" shape="round"
                         onClick={() => {
                             props.requestLoadMore(props.next)
                         }}

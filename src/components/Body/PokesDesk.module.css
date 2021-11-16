@@ -152,7 +152,7 @@
 
 .pokemonInfoCard img {
     width: 100%;
-    height: 30vh;
+    height: 25vh;
 }
 
 .butLoadMore {
@@ -168,7 +168,7 @@
 }
 
 .pokemonInfoCard {
-    font-size: 17px;
+    font-size: 15px;
     min-width: 30vw;
     background: rgb(34, 193, 195);
     background: linear-gradient(0deg,

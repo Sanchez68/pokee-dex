@@ -140,7 +140,6 @@
 .dropbtn{
     background-color: coral;
     color: #fff8cd;
-    padding: 16px;
     font-size: 16px;
     border: none;
     cursor: pointer;
@@ -148,9 +147,7 @@
     border-radius: 5px;
 }
 .dropdownWrapper {
-    /*left: 0;*/
     right: 0;
-    /*position: fixed;*/
 }
 
 .dropdown {
